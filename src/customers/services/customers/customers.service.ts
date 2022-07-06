@@ -6,12 +6,12 @@ export class CustomersService {
         {
             id: 1,
             email: 'zulkarnine@gmail.com',
-            createdAt: new Date(),
+            name: 'zulkar',
     },
     {
         id: 2,
         email: 'check@gmail.com',
-        createdAt: new Date(),
+        name: 'zulkar2',
     }
 ];
     // findCustomer(){
@@ -22,8 +22,14 @@ export class CustomersService {
     //     }
     // }
     findCustomerById(id: Number){
-        return this.users.find((user)=>{
+        return this.users.find((user)=>
             user.id === id
-        })
+        )
+    }
+
+    SearchCustomerById(id: Number){
+        return this.users.find((user)=>
+            user.id === id
+        )
     }
 }
